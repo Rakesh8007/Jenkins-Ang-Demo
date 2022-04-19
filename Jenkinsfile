@@ -37,6 +37,18 @@ node(){
         sh 'chmod 777 ./script/deploy.sh'
         sh './script/deploy.sh'
     }
+      stage("sonarqube analysis"){
+            steps{
+                nodejs(nodeJSInstallationName: 'NodeJs'){
+                    sh "npm install"
+                    withSonarQubeEnv('SonarQube'){
+                    sh 'npm install sonar-scanner'
+                    sh "npm run sonar"
+                    }
+                    
+                }
+            }
+        }
 }
  }
 
