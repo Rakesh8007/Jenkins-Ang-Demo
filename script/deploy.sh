@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ssh -tt ec2-user@13.235.245.21<<EOF
-    cd ~/jenkin-Ang-Demo
+    cd ~/Jenkins-Ang-Demo
     git pull origin main
     $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
     source ~/.nvm/nvm.sh
