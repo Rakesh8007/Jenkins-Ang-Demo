@@ -38,7 +38,7 @@ node(){
         sh './script/deploy.sh'
     }
       stage("sonarqube analysis"){
-            steps{
+           
                 nodejs(nodeJSInstallationName: 'NodeJs'){
                     sh "npm install"
                     withSonarQubeEnv('SonarQube'){
@@ -48,7 +48,7 @@ node(){
                     
                 }
             }
-        }
+        
 }
  }
 
