@@ -31,6 +31,10 @@ node(){
     stage('Stash changes') {
         stash allowEmpty: true, includes: 'bundle.tar.gz', name: 'buildArtifacts'
     }
+
+    stage('deploy'){
+        sh './script/deploy.sh'
+    }
 }
 
 //node('Nodejs') {
