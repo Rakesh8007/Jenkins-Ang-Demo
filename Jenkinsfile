@@ -33,6 +33,7 @@ node(){
     }
 
     stage('deploy'){
+        sh 'chmod 777 ./script/deploy.sh'
         sh './script/deploy.sh'
     }
 }
