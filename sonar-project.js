@@ -1,7 +1,7 @@
 const sonarqubeScanner = require('sonarqube-scanner');
 
 sonarqubeScanner({
-  serverUrl: 'http://13.127.182.248:9000/',
+  serverUrl: 'http://65.0.169.26:9000/',
        options : {
 	    'sonar.projectDescription': 'ngautomation',
 	    'sonar.projectName': 'ngautomation',
